@@ -17,6 +17,8 @@ cv_bridge/cv_bridge.h
 -
 sensor_msgs/Image.h
 -
+sensor_msgs/CompressedImage.h
+-
 
 /opt/ros/noetic/include/cv_bridge/cv_bridge.h
 sensor_msgs/Image.h

@@ -15,16 +15,21 @@ private:
     // 이미지 구독자 객체
     ros::Subscriber image_sub_;
     // 이미지 퍼블리셔 객체
-    ros::Publisher image_compressed_pub_;
+   ros::Publisher image_compressed_pub_;
+
+    image_transport::Publisher image_pub_;
+
+    cv::Mat src;
+    sensor_msgs::CompressedImage msg_data;
 
 public:
     Imagesub_Node()
     {
         // camera/color/image_raw 토픽을 받아 이미지
         image_sub_ = nh.subscribe("/camera/color/image_raw",10,&Imagesub_Node::imageCb,this);
-        // 압축된 이미지로 전송
-        image_compressed_pub_ = nh.advertise<sensor_msgs::CompressedImage>("/camera/color/image_raw/compressed",10);
-
+        // 압축된 이미지로 전송 rostopic에서 보내는 데이터값과 내가 토픽에서 보내는 데이터
+        
+        image_compressed_pub_ = nh.advertise<sensor_msgs::CompressedImage>("/compressed",10);
     }
 
 // 이미지를 영상으로 부터 수신하는 서브스크라이버 sensor_mags/image를 통해서 값을
@@ -50,7 +55,12 @@ public:
      cv_bridge::CvImagePtr cv_ptr;
      try
      {
-       cv_ptr = cv_bridge::toCvCopy(msg, sensor_msgs::image_encodings::BGR8);
+        // BGR8은 색상이 올바름, RGB8은 색상이 파란느낌, mono8은 grayscale은 아닌듯한데 gray가나옴
+        // 포인터 cv_ptr 
+        cv_ptr = cv_bridge::toCvCopy(msg, sensor_msgs::image_encodings::BGR8);
+        src = cv_ptr -> image.clone();
+    
+       bool val = cv::imencode(".jpg", src, msg_data.b); // 행렬의 타입은 mat이고 이걸 토픽으로 아웃풋을 만들어서 val에 대입
      }
      catch (cv_bridge::Exception& e)
      {
@@ -58,17 +68,17 @@ public:
        return;
      }
  
-     // Draw an example circle on the video stream
-     if (cv_ptr->image.rows > 60 && cv_ptr->image.cols > 60)
-      cv::circle(cv_ptr->image, cv::Point(250, 250), 10, CV_RGB(255,0,0));
- 
-     // Update GUI Window
-     cv::imshow("OPENCV_WINDOW", cv_ptr->image);
-     cv::waitKey(3);
+    //  // Update GUI Window
+    //  cv::imshow("OPENCV_WINDOW", cv_ptr->image);
+    //  cv::waitKey(3);
  
  
      // Output modified video stream
-     image_compressed_pub_.publish(cv_ptr->toImageMsg());
+     //image_compressed_pub_.publish(cv_ptr->toImageMsg());
+
+   
+        image_compressed_pub_.publish(msg_data);
+
    }
 };
 

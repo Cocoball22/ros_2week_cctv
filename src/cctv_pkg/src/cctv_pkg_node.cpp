@@ -15,7 +15,7 @@ private:
     ros::NodeHandle nh;
     // 이미지 구독자 객체
     ros::Subscriber Comp_sub_;
-    cv::Mat frame, data ;
+    cv::Mat frame, data ; // OpenCV의 기본 이미지 매트릭스 형식
 
 public:
     Comp_Sub()
@@ -50,18 +50,20 @@ public:
 //         cv::waitKey(10);
 //     }
     
-     void imageCallback(const sensor_msgs::CompressedImage::ConstPtr& msg)
+     void imageCallback(const sensor_msgs::CompressedImage::ConstPtr& msg) // compressedImage 압축된 이미지
      {
        try
-       {
-          frame = cv::imdecode((msg->data), 1);
+       {  // 예외가 발생할 수 있는 코드 블록을 중괄호{}로 감싸 준다.
+          // 압축된 이미지 데이터를 cv::Mat으로 변환
+          frame = cv::imdecode((msg->data), 1); // decode과정을 해줘야함 
 
-
+        // 이미지 표시
          cv::imshow("view", frame);
-         cv::waitKey(1);
+         cv::waitKey(1); // 입력 키를 기다리는 함수??
        }
        catch (cv_bridge::Exception& e)
        {
+        // 예외가 발생하면 다음 문장을 실행
          ROS_ERROR("cannot decode image");
        }
      }

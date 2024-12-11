@@ -1,0 +1,8 @@
+prefix=/home/cona/camera_ws/devel
+
+Name: ImageSub_node
+Description: Description of ImageSub_node
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

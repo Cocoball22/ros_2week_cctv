@@ -1,0 +1,2 @@
+ImageSub_node:OrbbecSDK_ROS1
+-DCATKIN_DEVEL_PREFIX=/home/cona/camera_ws/devel -DCMAKE_INSTALL_PREFIX=/home/cona/camera_ws/install -G Unix Makefiles

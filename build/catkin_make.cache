@@ -1,0 +1,2 @@
+Imagesub_Node
+-DCATKIN_DEVEL_PREFIX=/home/cona/test_3_ws/devel -DCMAKE_INSTALL_PREFIX=/home/cona/test_3_ws/install -G Unix Makefiles

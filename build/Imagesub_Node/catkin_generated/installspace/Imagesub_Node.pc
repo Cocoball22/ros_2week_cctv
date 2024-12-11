@@ -1,0 +1,8 @@
+prefix=/home/cona/test_3_ws/install
+
+Name: Imagesub_Node
+Description: Description of Imagesub_Node
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -lImagesub_Node
+Requires: roscpp

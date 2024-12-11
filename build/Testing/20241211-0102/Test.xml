@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="(empty)"
+	BuildStamp="20241211-0102-Experimental"
+	Name="cona"
+	Generator="ctest-3.16.3"
+	CompilerName="/usr/bin/c++"
+	CompilerVersion="9.4.0"
+	OSName="Linux"
+	Hostname="cona"
+	OSRelease="5.15.0-126-generic"
+	OSVersion="#136~20.04.1-Ubuntu SMP Thu Nov 14 16:38:05 UTC 2024"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="142"
+	ProcessorCacheSize="8192"
+	NumberOfLogicalCPU="8"
+	NumberOfPhysicalCPU="4"
+	TotalVirtualMemory="2047"
+	TotalPhysicalMemory="15857"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="4100.01"
+	>
+	<Testing>
+		<StartDateTime>Dec 11 10:02 KST</StartDateTime>
+		<StartTestTime>1733878963</StartTestTime>
+		<TestList/>
+		<EndDateTime>Dec 11 10:02 KST</EndDateTime>
+		<EndTestTime>1733878963</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

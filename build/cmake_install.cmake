@@ -131,6 +131,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/cona/cctv_ws/build/gtest/cmake_install.cmake")
+  include("/home/cona/cctv_ws/build/cctv_pkg/cmake_install.cmake")
 
 endif()
 

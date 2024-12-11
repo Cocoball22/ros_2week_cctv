@@ -312,6 +312,26 @@
 				"role" : "libraries"
 			},
 			{
+				"fragment" : "/opt/ros/noetic/lib/libroscpp.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lpthread",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libboost_chrono.so.1.71.0",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/opt/ros/noetic/lib/libxmlrpcpp.so",
+				"role" : "libraries"
+			},
+			{
 				"fragment" : "/opt/ros/noetic/lib/libcv_bridge.so",
 				"role" : "libraries"
 			},
@@ -556,38 +576,6 @@
 				"role" : "libraries"
 			},
 			{
-				"fragment" : "/opt/ros/noetic/lib/libimage_transport.so",
-				"role" : "libraries"
-			},
-			{
-				"fragment" : "/opt/ros/noetic/lib/libmessage_filters.so",
-				"role" : "libraries"
-			},
-			{
-				"fragment" : "/opt/ros/noetic/lib/libclass_loader.so",
-				"role" : "libraries"
-			},
-			{
-				"fragment" : "-lPocoFoundation",
-				"role" : "libraries"
-			},
-			{
-				"fragment" : "-ldl",
-				"role" : "libraries"
-			},
-			{
-				"fragment" : "/opt/ros/noetic/lib/libroscpp.so",
-				"role" : "libraries"
-			},
-			{
-				"fragment" : "-lpthread",
-				"role" : "libraries"
-			},
-			{
-				"fragment" : "/usr/lib/x86_64-linux-gnu/libboost_chrono.so.1.71.0",
-				"role" : "libraries"
-			},
-			{
 				"fragment" : "/opt/ros/noetic/lib/librosconsole.so",
 				"role" : "libraries"
 			},
@@ -605,34 +593,6 @@
 			},
 			{
 				"fragment" : "/usr/lib/x86_64-linux-gnu/libboost_regex.so.1.71.0",
-				"role" : "libraries"
-			},
-			{
-				"fragment" : "/opt/ros/noetic/lib/libxmlrpcpp.so",
-				"role" : "libraries"
-			},
-			{
-				"fragment" : "/opt/ros/noetic/lib/libroslib.so",
-				"role" : "libraries"
-			},
-			{
-				"fragment" : "/opt/ros/noetic/lib/librospack.so",
-				"role" : "libraries"
-			},
-			{
-				"fragment" : "-lpython3.8",
-				"role" : "libraries"
-			},
-			{
-				"fragment" : "/usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0",
-				"role" : "libraries"
-			},
-			{
-				"fragment" : "/usr/lib/x86_64-linux-gnu/libboost_program_options.so.1.71.0",
-				"role" : "libraries"
-			},
-			{
-				"fragment" : "-ltinyxml2",
 				"role" : "libraries"
 			},
 			{

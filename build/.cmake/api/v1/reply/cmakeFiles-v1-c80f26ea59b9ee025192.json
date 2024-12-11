@@ -739,62 +739,6 @@
 			"path" : "/opt/ros/noetic/share/sensor_msgs/cmake/sensor_msgsConfig.cmake"
 		},
 		{
-			"isExternal" : true,
-			"path" : "/opt/ros/noetic/share/image_transport/cmake/image_transportConfig-version.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/opt/ros/noetic/share/image_transport/cmake/image_transportConfig.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/opt/ros/noetic/share/message_filters/cmake/message_filtersConfig-version.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/opt/ros/noetic/share/message_filters/cmake/message_filtersConfig.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/opt/ros/noetic/share/pluginlib/cmake/pluginlibConfig-version.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/opt/ros/noetic/share/pluginlib/cmake/pluginlibConfig.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/opt/ros/noetic/share/class_loader/cmake/class_loaderConfig-version.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/opt/ros/noetic/share/class_loader/cmake/class_loaderConfig.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/opt/ros/noetic/share/class_loader/cmake/class_loader-extras.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/opt/ros/noetic/share/roslib/cmake/roslibConfig-version.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/opt/ros/noetic/share/roslib/cmake/roslibConfig.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/opt/ros/noetic/share/rospack/cmake/rospackConfig-version.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/opt/ros/noetic/share/rospack/cmake/rospackConfig.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/opt/ros/noetic/share/roslib/cmake/roslib-extras.cmake"
-		},
-		{
 			"isGenerated" : true,
 			"path" : "/home/cona/cctv_ws/build/cctv_pkg/catkin_generated/ordered_paths.cmake"
 		},

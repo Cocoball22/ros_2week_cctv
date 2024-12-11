@@ -1,0 +1,8 @@
+prefix=/home/cona/cctv_ws/install
+
+Name: cctv_pkg
+Description: Description of cctv_pkg
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

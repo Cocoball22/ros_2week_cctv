@@ -1,0 +1,2 @@
+cctv_pkg
+-DCATKIN_DEVEL_PREFIX=/home/cona/cctv_ws/devel -DCMAKE_INSTALL_PREFIX=/home/cona/cctv_ws/install -G Unix Makefiles

@@ -50,6 +50,31 @@ public:
 //         cv::waitKey(10);
 //     }
     
+    /*header: 
+         seq: 8816
+         stamp: 
+           secs: 1733966737
+           nsecs:  22661888
+         frame_id: "camera_color_optical_frame"
+         height: 480
+         width: 640
+         encoding: "rgb8"
+         is_bigendian: 0
+         step: 1920
+         data: "<array type: uint8, length: 921600>"
+     */
+
+    /*
+    header: 
+      seq: 2077
+      stamp: 
+        secs: 0
+        nsecs:         0
+      frame_id: ''
+      format: ''
+      data: "<array type: uint8, length: 35777>"
+
+    */
      void imageCallback(const sensor_msgs::CompressedImage::ConstPtr& msg) // compressedImage 압축된 이미지
      {
        try

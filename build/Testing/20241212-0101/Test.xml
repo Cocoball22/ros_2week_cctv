@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="(empty)"
+	BuildStamp="20241212-0101-Experimental"
+	Name="cona-Z370-AORUS-Gaming-5"
+	Generator="ctest-3.16.3"
+	CompilerName="/usr/bin/c++"
+	CompilerVersion="9.4.0"
+	OSName="Linux"
+	Hostname="cona-Z370-AORUS-Gaming-5"
+	OSRelease="5.15.0-126-generic"
+	OSVersion="#136~20.04.1-Ubuntu SMP Thu Nov 14 16:38:05 UTC 2024"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="158"
+	ProcessorCacheSize="12288"
+	NumberOfLogicalCPU="12"
+	NumberOfPhysicalCPU="6"
+	TotalVirtualMemory="2047"
+	TotalPhysicalMemory="32036"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="4299.99"
+	>
+	<Testing>
+		<StartDateTime>Dec 12 10:01 KST</StartDateTime>
+		<StartTestTime>1733965286</StartTestTime>
+		<TestList/>
+		<EndDateTime>Dec 12 10:01 KST</EndDateTime>
+		<EndTestTime>1733965286</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

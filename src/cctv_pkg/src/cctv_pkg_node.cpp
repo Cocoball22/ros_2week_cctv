@@ -16,6 +16,8 @@ private:
     // 이미지 구독자 객체
     ros::Subscriber Comp_sub_;
     cv::Mat frame, data ; // OpenCV의 기본 이미지 매트릭스 형식
+    sensor_msgs::Image img;
+    std_msgs::Header header;
 
 public:
     Comp_Sub()
@@ -77,10 +79,31 @@ public:
     */
      void imageCallback(const sensor_msgs::CompressedImage::ConstPtr& msg) // compressedImage 압축된 이미지
      {
+        ROS_INFO("Timestamp:");
+        ROS_INFO("  - secs: %d", msg->header.stamp.sec);
+        ROS_INFO("  - nsecs: %d", msg->header.stamp.nsec);
+
+        // 2. Frame ID 분석
+        ROS_INFO("Frame ID: %s", msg->header.frame_id.c_str());g
+
+        // 3. Format 분석
+        ROS_INFO("Format: %s", msg->format.c_str());
+
+        // 4. 데이터 크기 정보 (선택적)
+        ROS_INFO("Data size: %lu bytes", msg->data.size());
+
+        // 시간 차이 계산 (현재 시간과 메시지 시간의 차이)
+        ros::Time current_time = ros::Time::now();
+        ros::Duration diff = current_time - msg->header.stamp;
+        ROS_INFO("Time difference from now: %.3f seconds", diff.toSec());
+
+        ROS_INFO("-------------------");
+
        try
        {  // 예외가 발생할 수 있는 코드 블록을 중괄호{}로 감싸 준다.
           // 압축된 이미지 데이터를 cv::Mat으로 변환
-          frame = cv::imdecode((msg->data), 1); // decode과정을 해줘야함 
+          frame = cv::imdecode(cv::Mat(msg->data), cv::IMREAD_COLOR); // decode과정을 해줘야함
+          sensor_msgs::Image img;
 
         // 이미지 표시
          cv::imshow("view", frame);

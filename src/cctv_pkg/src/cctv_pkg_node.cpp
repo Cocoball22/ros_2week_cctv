@@ -77,36 +77,63 @@ public:
       data: "<array type: uint8, length: 35777>"
 
     */
+
      void imageCallback(const sensor_msgs::CompressedImage::ConstPtr& msg) // compressedImage 압축된 이미지
      {
-        ROS_INFO("Timestamp:");
-        ROS_INFO("  - secs: %d", msg->header.stamp.sec);
-        ROS_INFO("  - nsecs: %d", msg->header.stamp.nsec);
+ 
+        // ROS_INFO("Timestamp:");
+        // ROS_INFO("  - secs: %d", msg->header.stamp.sec);
+        // ROS_INFO("  - nsecs: %d", msg->header.stamp.nsec);
 
         // 2. Frame ID 분석
-        ROS_INFO("Frame ID: %s", msg->header.frame_id.c_str());g
+        // ROS_INFO("Frame ID: %s", msg->header.frame_id.c_str());
 
         // 3. Format 분석
-        ROS_INFO("Format: %s", msg->format.c_str());
+        // ROS_INFO("Format: %s", msg->format.c_str());
 
         // 4. 데이터 크기 정보 (선택적)
-        ROS_INFO("Data size: %lu bytes", msg->data.size());
+        // ROS_INFO("Data size: %lu bytes", msg->data.size());
 
         // 시간 차이 계산 (현재 시간과 메시지 시간의 차이)
-        ros::Time current_time = ros::Time::now();
-        ros::Duration diff = current_time - msg->header.stamp;
-        ROS_INFO("Time difference from now: %.3f seconds", diff.toSec());
+        // ros::Time current_time = ros::Time::now();
+        // ros::Duration diff = current_time - msg->header.stamp;
+        // ROS_INFO("Time difference from now: %.3f seconds", diff.toSec());
 
-        ROS_INFO("-------------------");
+        // ROS_INFO("-------------------");
+
+        // 기본적인 이미지 정보 출력
+        // ROS_INFO_STREAM("Image properties:");
+        // ROS_INFO_STREAM("Size: " << frame.rows << "x" << frame.cols);
+        // ROS_INFO_STREAM("Channels: " << frame.channels());
+        // ROS_INFO_STREAM("Type: " << frame.type());
 
        try
        {  // 예외가 발생할 수 있는 코드 블록을 중괄호{}로 감싸 준다.
           // 압축된 이미지 데이터를 cv::Mat으로 변환
           frame = cv::imdecode(cv::Mat(msg->data), cv::IMREAD_COLOR); // decode과정을 해줘야함
-          sensor_msgs::Image img;
+          
+          cv::Mat inverted_frame = cv::Mat::zeros(frame.size(), CV_8UC1);
+
+          // 이미지 데이터를 순화하면서 역상 변환
+          for (int y = 0; y < frame.rows; y++)
+          {
+            for(int x = 0; x < frame.cols; x++)
+            {
+              cv::Vec3b& pixel_1 = frame.at<cv::Vec3b>(y, x);  // 8-bit unsigned, 3채널 (BGR 이미지) 
+              uchar& pixel_2 = inverted_frame.at<uchar>(y, x); // unsigned char
+
+              // pixel_2[0] = 255 - pixel_1[0]; // B
+              // pixel_2[1] = 255 - pixel_1[1]; // G
+              // pixel_2[2] = 255 - pixel_1[2]; // R
+              // pixel_2[0] = B, pixel_2[1] = G, pixel_2[2] = R
+              pixel_2 = (pixel_1[0] * 0.114) + (pixel_1[1] * 0.587) + (pixel_1[2] * 0.299);
+            }
+          }
+        //  ROS_INFO("size: %d",frame.rows);
 
         // 이미지 표시
-         cv::imshow("view", frame);
+         cv::imshow("Original Image", frame);
+         cv::imshow("Inverted Image", inverted_frame);
          cv::waitKey(1); // 입력 키를 기다리는 함수??
        }
        catch (cv_bridge::Exception& e)

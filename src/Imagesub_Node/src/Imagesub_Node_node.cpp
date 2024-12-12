@@ -20,7 +20,7 @@ private:
     image_transport::Publisher image_pub_;
 
     cv::Mat src;
-    sensor_msgs::CompressedImage msg_data;
+    
     bool val;
 public:
     Imagesub_Node()
@@ -29,6 +29,7 @@ public:
         image_sub_ = nh.subscribe("/camera/color/image_raw",10,&Imagesub_Node::imageCb,this);
         // 압축된 이미지로 전송 rostopic에서 보내는 데이터값과 내가 토픽에서 보내는 데이터
         
+        // sensor_msg 데이터 타입으로 토픽 메시지는 "/compressed" 
         image_compressed_pub_ = nh.advertise<sensor_msgs::CompressedImage>("/compressed",10);
     }
 
@@ -53,6 +54,7 @@ public:
     void imageCb(const sensor_msgs::ImageConstPtr& msg)
    {
      cv_bridge::CvImagePtr cv_ptr;
+     sensor_msgs::CompressedImage compressed_msg;
      try
      {
         // BGR8은 색상이 올바름, RGB8은 색상이 파란느낌, mono8은 grayscale은 아닌듯한데 gray가나옴
@@ -61,7 +63,17 @@ public:
         src = cv_ptr -> image.clone();
 
         // 여기서 bool로 사용한 이유는 값이 변하는지 안 변하는지를 확인 하는 변수
-       val = cv::imencode(".jpg", src, msg_data.data); // 행렬의 타입은 mat이고 이걸 토픽으로 아웃풋을 만들어서 val에 대입
+       val = cv::imencode(".jpg", src, compressed_msg.data); // 행렬의 타입은 mat이고 이걸 토픽으로 아웃풋을 만들어서 val에 대입
+
+        // 인코딩에서 compressed에 대한 설정을 하지 않았다 
+        // 현재 ROS 시간으로 타임스탬프 설정
+        //compressed_msg.header.stamp = ros::Time::now();
+        compressed_msg.header = msg->header;
+        compressed_msg.header.frame_id =  "camera_compressed_image"; // 프레임 ID설정
+        compressed_msg.format = "my:rgb8; jpeg compressed bgr8"; // 메시지의 데이터 및 포맷 설정
+        
+
+        
      }
      catch (cv_bridge::Exception& e)
      {
@@ -69,18 +81,18 @@ public:
        return;
      }
  
-    //  // Update GUI Window
-    //  cv::imshow("OPENCV_WINDOW", cv_ptr->image);
-    //  cv::waitKey(3);
+     // Update GUI Window
+     cv::imshow("OPENCV_WINDOW", cv_ptr->image);
+     cv::waitKey(3);
  
  
      // Output modified video stream
      //image_compressed_pub_.publish(cv_ptr->toImageMsg());
 
      // val은 변환이 되었는지를 확인하는 변수
-        if(val == true)
-        ROS_INFO("complete encode");
-        image_compressed_pub_.publish(msg_data);
+        // if(val == true)
+        // ROS_INFO("complete encode");
+        image_compressed_pub_.publish(compressed_msg);
 
    }
 };

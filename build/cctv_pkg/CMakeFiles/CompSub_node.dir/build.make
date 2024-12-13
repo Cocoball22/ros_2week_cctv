@@ -49,36 +49,36 @@ CMAKE_SOURCE_DIR = /home/cona/cctv_ws/src
 CMAKE_BINARY_DIR = /home/cona/cctv_ws/build
 
 # Include any dependencies generated for this target.
-include cctv_pkg/CMakeFiles/cctv_pkg_node.dir/depend.make
+include cctv_pkg/CMakeFiles/CompSub_node.dir/depend.make
 
 # Include the progress variables for this target.
-include cctv_pkg/CMakeFiles/cctv_pkg_node.dir/progress.make
+include cctv_pkg/CMakeFiles/CompSub_node.dir/progress.make
 
 # Include the compile flags for this target's objects.
-include cctv_pkg/CMakeFiles/cctv_pkg_node.dir/flags.make
+include cctv_pkg/CMakeFiles/CompSub_node.dir/flags.make
 
-cctv_pkg/CMakeFiles/cctv_pkg_node.dir/src/cctv_pkg_node.cpp.o: cctv_pkg/CMakeFiles/cctv_pkg_node.dir/flags.make
-cctv_pkg/CMakeFiles/cctv_pkg_node.dir/src/cctv_pkg_node.cpp.o: /home/cona/cctv_ws/src/cctv_pkg/src/cctv_pkg_node.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cona/cctv_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object cctv_pkg/CMakeFiles/cctv_pkg_node.dir/src/cctv_pkg_node.cpp.o"
-	cd /home/cona/cctv_ws/build/cctv_pkg && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cctv_pkg_node.dir/src/cctv_pkg_node.cpp.o -c /home/cona/cctv_ws/src/cctv_pkg/src/cctv_pkg_node.cpp
+cctv_pkg/CMakeFiles/CompSub_node.dir/src/CompSub_node.cpp.o: cctv_pkg/CMakeFiles/CompSub_node.dir/flags.make
+cctv_pkg/CMakeFiles/CompSub_node.dir/src/CompSub_node.cpp.o: /home/cona/cctv_ws/src/cctv_pkg/src/CompSub_node.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cona/cctv_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object cctv_pkg/CMakeFiles/CompSub_node.dir/src/CompSub_node.cpp.o"
+	cd /home/cona/cctv_ws/build/cctv_pkg && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CompSub_node.dir/src/CompSub_node.cpp.o -c /home/cona/cctv_ws/src/cctv_pkg/src/CompSub_node.cpp
 
-cctv_pkg/CMakeFiles/cctv_pkg_node.dir/src/cctv_pkg_node.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cctv_pkg_node.dir/src/cctv_pkg_node.cpp.i"
-	cd /home/cona/cctv_ws/build/cctv_pkg && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cona/cctv_ws/src/cctv_pkg/src/cctv_pkg_node.cpp > CMakeFiles/cctv_pkg_node.dir/src/cctv_pkg_node.cpp.i
+cctv_pkg/CMakeFiles/CompSub_node.dir/src/CompSub_node.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CompSub_node.dir/src/CompSub_node.cpp.i"
+	cd /home/cona/cctv_ws/build/cctv_pkg && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cona/cctv_ws/src/cctv_pkg/src/CompSub_node.cpp > CMakeFiles/CompSub_node.dir/src/CompSub_node.cpp.i
 
-cctv_pkg/CMakeFiles/cctv_pkg_node.dir/src/cctv_pkg_node.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cctv_pkg_node.dir/src/cctv_pkg_node.cpp.s"
-	cd /home/cona/cctv_ws/build/cctv_pkg && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cona/cctv_ws/src/cctv_pkg/src/cctv_pkg_node.cpp -o CMakeFiles/cctv_pkg_node.dir/src/cctv_pkg_node.cpp.s
+cctv_pkg/CMakeFiles/CompSub_node.dir/src/CompSub_node.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CompSub_node.dir/src/CompSub_node.cpp.s"
+	cd /home/cona/cctv_ws/build/cctv_pkg && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cona/cctv_ws/src/cctv_pkg/src/CompSub_node.cpp -o CMakeFiles/CompSub_node.dir/src/CompSub_node.cpp.s
 
-# Object files for target cctv_pkg_node
-cctv_pkg_node_OBJECTS = \
-"CMakeFiles/cctv_pkg_node.dir/src/cctv_pkg_node.cpp.o"
+# Object files for target CompSub_node
+CompSub_node_OBJECTS = \
+"CMakeFiles/CompSub_node.dir/src/CompSub_node.cpp.o"
 
-# External object files for target cctv_pkg_node
-cctv_pkg_node_EXTERNAL_OBJECTS =
+# External object files for target CompSub_node
+CompSub_node_EXTERNAL_OBJECTS =
 
-/home/cona/cctv_ws/devel/lib/cctv_pkg/node: cctv_pkg/CMakeFiles/cctv_pkg_node.dir/src/cctv_pkg_node.cpp.o
-/home/cona/cctv_ws/devel/lib/cctv_pkg/node: cctv_pkg/CMakeFiles/cctv_pkg_node.dir/build.make
+/home/cona/cctv_ws/devel/lib/cctv_pkg/node: cctv_pkg/CMakeFiles/CompSub_node.dir/src/CompSub_node.cpp.o
+/home/cona/cctv_ws/devel/lib/cctv_pkg/node: cctv_pkg/CMakeFiles/CompSub_node.dir/build.make
 /home/cona/cctv_ws/devel/lib/cctv_pkg/node: /opt/ros/noetic/lib/libroscpp.so
 /home/cona/cctv_ws/devel/lib/cctv_pkg/node: /usr/lib/x86_64-linux-gnu/libpthread.so
 /home/cona/cctv_ws/devel/lib/cctv_pkg/node: /usr/lib/x86_64-linux-gnu/libboost_chrono.so.1.71.0
@@ -193,20 +193,20 @@ cctv_pkg_node_EXTERNAL_OBJECTS =
 /home/cona/cctv_ws/devel/lib/cctv_pkg/node: /usr/lib/x86_64-linux-gnu/libopencv_photo.so.4.2.0
 /home/cona/cctv_ws/devel/lib/cctv_pkg/node: /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.4.2.0
 /home/cona/cctv_ws/devel/lib/cctv_pkg/node: /usr/lib/x86_64-linux-gnu/libopencv_core.so.4.2.0
-/home/cona/cctv_ws/devel/lib/cctv_pkg/node: cctv_pkg/CMakeFiles/cctv_pkg_node.dir/link.txt
+/home/cona/cctv_ws/devel/lib/cctv_pkg/node: cctv_pkg/CMakeFiles/CompSub_node.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/cona/cctv_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/cona/cctv_ws/devel/lib/cctv_pkg/node"
-	cd /home/cona/cctv_ws/build/cctv_pkg && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/cctv_pkg_node.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/cona/cctv_ws/build/cctv_pkg && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/CompSub_node.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-cctv_pkg/CMakeFiles/cctv_pkg_node.dir/build: /home/cona/cctv_ws/devel/lib/cctv_pkg/node
+cctv_pkg/CMakeFiles/CompSub_node.dir/build: /home/cona/cctv_ws/devel/lib/cctv_pkg/node
 
-.PHONY : cctv_pkg/CMakeFiles/cctv_pkg_node.dir/build
+.PHONY : cctv_pkg/CMakeFiles/CompSub_node.dir/build
 
-cctv_pkg/CMakeFiles/cctv_pkg_node.dir/clean:
-	cd /home/cona/cctv_ws/build/cctv_pkg && $(CMAKE_COMMAND) -P CMakeFiles/cctv_pkg_node.dir/cmake_clean.cmake
-.PHONY : cctv_pkg/CMakeFiles/cctv_pkg_node.dir/clean
+cctv_pkg/CMakeFiles/CompSub_node.dir/clean:
+	cd /home/cona/cctv_ws/build/cctv_pkg && $(CMAKE_COMMAND) -P CMakeFiles/CompSub_node.dir/cmake_clean.cmake
+.PHONY : cctv_pkg/CMakeFiles/CompSub_node.dir/clean
 
-cctv_pkg/CMakeFiles/cctv_pkg_node.dir/depend:
-	cd /home/cona/cctv_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/cona/cctv_ws/src /home/cona/cctv_ws/src/cctv_pkg /home/cona/cctv_ws/build /home/cona/cctv_ws/build/cctv_pkg /home/cona/cctv_ws/build/cctv_pkg/CMakeFiles/cctv_pkg_node.dir/DependInfo.cmake --color=$(COLOR)
-.PHONY : cctv_pkg/CMakeFiles/cctv_pkg_node.dir/depend
+cctv_pkg/CMakeFiles/CompSub_node.dir/depend:
+	cd /home/cona/cctv_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/cona/cctv_ws/src /home/cona/cctv_ws/src/cctv_pkg /home/cona/cctv_ws/build /home/cona/cctv_ws/build/cctv_pkg /home/cona/cctv_ws/build/cctv_pkg/CMakeFiles/CompSub_node.dir/DependInfo.cmake --color=$(COLOR)
+.PHONY : cctv_pkg/CMakeFiles/CompSub_node.dir/depend
 

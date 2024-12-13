@@ -24,13 +24,13 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
-add_executable(${PROJECT_NAME}_node src/cctv_pkg_node.cpp)
+add_executable(CompSub_node src/CompSub_node.cpp)
 
-set_target_properties(${PROJECT_NAME}_node PROPERTIES OUTPUT_NAME node PREFIX "")
+set_target_properties(CompSub_node PROPERTIES OUTPUT_NAME node PREFIX "")
 
-add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(CompSub_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
-target_link_libraries(${PROJECT_NAME}_node
+target_link_libraries(CompSub_node
   ${catkin_LIBRARIES}
   ${OpenCV_LIBRARIES}
 )

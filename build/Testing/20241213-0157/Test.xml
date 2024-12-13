@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Site BuildName="(empty)"
-	BuildStamp="20241212-0101-Experimental"
+	BuildStamp="20241213-0157-Experimental"
 	Name="cona-Z370-AORUS-Gaming-5"
 	Generator="ctest-3.16.3"
 	CompilerName="/usr/bin/c++"
@@ -21,14 +21,14 @@
 	TotalVirtualMemory="2047"
 	TotalPhysicalMemory="32036"
 	LogicalProcessorsPerPhysical="2"
-	ProcessorClockFrequency="4299.99"
+	ProcessorClockFrequency="3700"
 	>
 	<Testing>
-		<StartDateTime>Dec 12 10:01 KST</StartDateTime>
-		<StartTestTime>1733965286</StartTestTime>
+		<StartDateTime>Dec 13 10:57 KST</StartDateTime>
+		<StartTestTime>1734055028</StartTestTime>
 		<TestList/>
-		<EndDateTime>Dec 12 10:01 KST</EndDateTime>
-		<EndTestTime>1733965286</EndTestTime>
+		<EndDateTime>Dec 13 10:57 KST</EndDateTime>
+		<EndTestTime>1734055028</EndTestTime>
 		<ElapsedMinutes>0</ElapsedMinutes>
 	</Testing>
 </Site>

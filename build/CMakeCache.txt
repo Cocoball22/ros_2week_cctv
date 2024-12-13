@@ -406,9 +406,6 @@ cctv_pkg_BINARY_DIR:STATIC=/home/cona/cctv_ws/build/cctv_pkg
 //Value Computed by CMake
 cctv_pkg_SOURCE_DIR:STATIC=/home/cona/cctv_ws/src/cctv_pkg
 
-//The directory containing a CMake configuration file for class_loader.
-class_loader_DIR:PATH=/opt/ros/noetic/share/class_loader/cmake
-
 //The directory containing a CMake configuration file for cpp_common.
 cpp_common_DIR:PATH=/opt/ros/noetic/share/cpp_common/cmake
 
@@ -464,20 +461,11 @@ gtest_hide_internal_symbols:BOOL=OFF
 //Dependencies for the target
 gtest_main_LIB_DEPENDS:STATIC=general;gtest;
 
-//The directory containing a CMake configuration file for image_transport.
-image_transport_DIR:PATH=/opt/ros/noetic/share/image_transport/cmake
-
 //Path to a library.
 lib:FILEPATH=/opt/ros/noetic/lib/libcv_bridge.so
 
-//The directory containing a CMake configuration file for message_filters.
-message_filters_DIR:PATH=/opt/ros/noetic/share/message_filters/cmake
-
 //The directory containing a CMake configuration file for message_runtime.
 message_runtime_DIR:PATH=/opt/ros/noetic/share/message_runtime/cmake
-
-//The directory containing a CMake configuration file for pluginlib.
-pluginlib_DIR:PATH=/opt/ros/noetic/share/pluginlib/cmake
 
 //The directory containing a CMake configuration file for rosconsole.
 rosconsole_DIR:PATH=/opt/ros/noetic/share/rosconsole/cmake
@@ -493,12 +481,6 @@ roscpp_traits_DIR:PATH=/opt/ros/noetic/share/roscpp_traits/cmake
 
 //The directory containing a CMake configuration file for rosgraph_msgs.
 rosgraph_msgs_DIR:PATH=/opt/ros/noetic/share/rosgraph_msgs/cmake
-
-//The directory containing a CMake configuration file for roslib.
-roslib_DIR:PATH=/opt/ros/noetic/share/roslib/cmake
-
-//The directory containing a CMake configuration file for rospack.
-rospack_DIR:PATH=/opt/ros/noetic/share/rospack/cmake
 
 //The directory containing a CMake configuration file for rostime.
 rostime_DIR:PATH=/opt/ros/noetic/share/rostime/cmake
